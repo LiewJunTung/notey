@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<head>
+    <script type="text/javascript" src="js/Time.js"></script>
+    <link rel="stylesheet" type="text/css" href="time.css">
+</head>
+<body>
+    <form id='form1'>
+        <label for="CTime">Select: </label>
+        </br>
+    <div>
+    <span class="styled-select">
+    <select name="combo" id="hour" style="border: 2px solid white">
+    <option value="00">00</option>
+    <option value="01">01</option>
+    <option value="02">02</option>
+    <option value="03">03</option>
+    <option value="04">04</option>
+    <option value="05">05</option>
+    <option value="06">06</option>
+    <option value="07">07</option>
+    <option value="08">08</option>
+    <option value="09">09</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option></select>
+    </span>
+
+
+    <span class="styled-select">
+    <select name="combo" id="minute" style="border: 2px solid white">
+    <option value="00">00</option>
+    <option value="05">05</option>
+    <option value="10">10</option>
+    <option value="15">15</option>
+    <option value="20">20</option>
+    <option value="25">25</option>
+    <option value="30">30</option>
+    <option value="35">35</option>
+    <option value="40">40</option>
+    <option value="45">45</option>
+    <option value="50">50</option>
+    <option value="55">55</option></select>
+    </span>
+
+    <span class="styled-select1">
+    <select name="combo" id="timeZone" style="border: 2px solid white">
+    <option value="2">CEST</option>
+    <option value="-4">EDT</option>
+    <option value="0">GMT/UTC</option>
+    <option value="-7">PST</option>
+    <option value="-4">ET/EST</option>
+
+    <optgroup label='------------------'></optgroup>
+    <optgroup label='Africa'></optgroup>
+    <option title="Central Africa Time" value="2">CAT</option>
+    <option title="Central European Time" value="1">CET</option>
+    <option title="Cape Verde Time" value="-1">CVT</option>
+    <option title="Eastern Africa Time" value="3">EAT</option>
+    <option title="Eastern European Summer Time" value="3">EEST</option>
+    <option title="Eastern European Time" value="2">EET</option>
+    <option title="Greenwich Mean Time" value="0">GMT</option>
+    <option title="Mauritius Time" value="4">MUT</option>
+    <option title="Reunion Time" value="4">RET</option>
+    <option title="South Africa Standard Time" value="2">SAST</option>
+    <option title="Seychelles Time" value="4">SCT</option>
+    <option title="West Africa Summer Time" value="2">WAST</option>
+    <option title="West Africa Time" value="1">WAT</option>
+    <option title="Western European Summer Time " value="1">WEST</option>
+    <option title="Western European Time" value="0">WET</option>
+    <option title="Western Sahara Summer Time" value="1">WST</option>
+    <option title="Western Sahara Standard Time" value="0">WT</option>
+
+    <optgroup label='------------------'></optgroup>
+    <optgroup label='Antarctica'></optgroup>
+    <option title="Casey Time" value="8">CAST</option>
+    <option title="Davis Time" value="7">DAVT</option>
+    <option title="Mawson Time" value="5">MAWT</option>
+    <option title="New Zealand Daylight Time" value="13">NZDT</option>
+    <option title="New Zealand Standard Time" value="12">NZST</option>
+
+    <optgroup label='------------------'></optgroup>
+    <optgroup label='Asia'></optgroup>
+    <option title="Afghanistan Time" value="4">AFT</option>
+    <option title="Alma-Ata Time" value="6">ALMT</option>
+    <option title="Armenia Summer Time" value="5">AMST</option>
+    <option title="Armenia Time" value="4">AMT</option>
+    <option title="Anadyr Summer Time" value="12">ANAST</option>
+    <option title=" Anadyr Time" value="12">ANAT</option>
+    <option title="Aqtobe Time" value="5">AQTT</option>
+    <option title="Arabia Standard Time" value="3">AST</option>
+    <option title="Azerbajian Summer Time" value="5">AZST</option>
+    <option title="Azerbajian Time" value="4">AZT</option>
+    <option title="Brunei Darussalam Time" value="8">BNT</option>
+    <option title="Bangladesh Standard Time" value="6">BST</option>
+    <option title="Bhutan Time" value="6">BTT</option>
+    <option title="China Standard Time" value="8">CST</option>
+    <option title="Eastern European Summer Time" value="3">EEST</option>
+    <option title="Eastern European Time" value="2">EET</option>
+    <option title="Georgia Standard Time" value="4">GET</option>
+    <option title="Gulf Standard Time" value="4">GST</option>
+    <option title="Hong Kong Time" value="8">HKT</option>
+    <option title="Hovd Time" value="7">HOVT</option>
+    <option title="Indochina Time" value="7">ICT</option>
+    <option title="Isreal Daylight Time" value="3">IDT</option>
+    <option title="Iran Daylight Time" value="4">IRDT</option>
+    <option title="Irkutsk Summer" value="9">IRKST</option>
+    <option title="Irkutsk Time" value="9">IRKT</option>
+    <option title="Iran Standard Time" value="3">IRST</option>
+    <option title="India Standard Time" value="5">IST</option>
+    <option title="Japan Standard Time" value="9">JST</option>
+    <option title="Kyrgyzstan Time" value="6">KGT</option>
+    <option title="Krasnoyarsk Summer Time" value="8">KRAST</option>
+    <option title="Krasnoyarsk Time" value="8">KRAT</option>
+    <option title="Korea Standard Time" value="9">KST</option>
+    <option title="Magadan Summer Time" value="12">MAGST</option>
+    <option title="Magadan Time" value="12">MAGT</option>
+    <option title="Myanmar Time" value="6">MMT</option>
+    <option title="Maldivies Time" value="5">MVT</option>
+    <option title="Malaysia Time" value="8">MYT</option>
+    <option title="Novosibirsk Summer Time" value="7">NOVST</option>
+    <option title="Novosibirsk Time" value="6">NOVT</option>
+    <option title="Nepal Time" value="5">NPT</option>
+    <option title="Omsk Summer Time" value="7">OMSST</option>
+    <option title="Omsk Standard Time" value="7">OMST</option>
+    <option title="Kamchatka Summer Time Time" value="12">PETST</option>
+    <option title="Kamchatka Time" value="12">PETT</option>
+    <option title="Philipine Time" value="8">PHT</option>
+    <option title="Pakistan Standard Time" value="5">PKT</option>
+    <option title="Singapore Time" value="8">SGT</option>
+    <option title="Tajikistan Time" value="5">TJT</option>
+    <option title="East Timor Time" value="9">TLT</option>
+    <option title="Turkmenistan Time" value="5">TMT</option>
+    <option title="Ulaanbaatar" value="8">ULAT</option>
+    <option title="Uzbekistan Time" value="5">UZT</option>
+    <option title="Vladivostok Summer Time" value="11">VLAST</option>
+    <option title="Vladivostok Time" value="11">VLAT</option>
+    <option title="Western Indonesian Time" value="7">WIB</option>
+    <option title="Eastern Indonesian Time" value="9">WIT</option>
+    <option title="Central Indonesian Time" value="8">WITA</option>
+    <option title="Yakutsk Summer Time" value="10">YAKST</option>
+    <option title="Yakutsk Time" value="10">YAKT</option>
+    <option title="Yekaterinburg Summer Time" value="6">YEKST</option>
+    <option title="Yekaterinburg Time" value="6">YEKT</option>
+
+    <optgroup label='------------------'></optgroup>
+    <optgroup label='Atlantic'></optgroup>
+    <option title="Atlantic Daylight Time" value="-3">ADT</option>
+    <option title="Atlantic Standard Time" value="-4">AST</option>
+    <option title="Azores Summer Time" value="0">AZOST</option>
+    <option title="Azores Time" value="-1">AZOT</option>
+
+    <optgroup label='------------------'></optgroup>
+    <optgroup label='Australia'></optgroup>
+    <option title="Australian Central Daylight Time" value="10">ACDT</option>
+    <option title="Australian Central Standard Time" value="9">ACST</option>
+    <option title="Christmas Island Time" value="7">CXT</option>
+    <option title="Australian Eastern Daylight Time" value="11">AEDT</option>
+    <option title="Australian Eastern Standard Time" value="10">AEST</option>
+    <option title="Lord Howe Daylight Time" value="11">LHDT</option>
+    <option title="Lord Howe Standard Time" value="10">LHST</option>
+    <option title="Norfolk Time" value="11">NFT</option>
+    <option title="Australian Western Daylight Time" value="9">AWDT</option>
+    <option title="Australian Western Standard Time" value="8">AWST</option>
+
+    <optgroup label='------------------'></optgroup>
+    <optgroup label='Caribbean'></optgroup>
+    <option  title="Atlantic Standard Time" value="-4">AST</option>
+    <option title="Cuba Daylight Time" value="-4">CDT</option>
+    <option title="Cuba Standard Time" value="-5">CST</option>
+    <option title="Eastern Daylight Time" value="-4">EDT</option>
+    <option title="Eastern Standard Time" value="-5">EST</option>
+
+    <optgroup label='------------------'></optgroup>
+    <optgroup label='C.America'></optgroup>
+    <option title="Central Standard Time" value="-6">CST</option>
+    <option title="Eastern Standard Time" value="-5">HNE</option>
+
+    <optgroup label='------------------'></optgroup>
+    <optgroup label='Europe'></optgroup>
+    <option title="British Summer Time" value="1">BST</option>
+    <option title="Central European Summer Time" value="2">CEST</option>
+    <option title="Central European Time" value="1">CET</option>
+    <option title="Eastern European Summer Time" value="3">EEST</option>
+    <option title="Eastern European Time" value="2">EET</option>
+    <option title="Greenwich Mean Time" value="0">GMT</option>
+    <option title="Irish Standard Time" value="1">IST</option>
+    <option title="Kuybyshev Time" value="4">KUYT</option>
+    <option title="Moscow Daylight Time" value="4">MSD</option>
+    <option title="Moscow Standard Time" value="4">MSK</option>
+    <option title="Samara Time" value="4">SAMT</option>
+    <option title="Western European Summer Time" value="1">WEST</option>
+    <option title="Western European Time" value="0">WET</option>
+
+    <optgroup label='------------------'></optgroup>
+    <optgroup label='Indian.O'></optgroup>
+    <option title="Cocos Islands Time" value="6">CCT</option>
+    <option title="East Africa Time" value="3">EAT</option>
+    <option title="Indian Chagos Time" value="6">IOT</option>
+    <option title="French Southern and Antarctic Time" value="5">TFT</option>
+
+    <optgroup label='------------------'></optgroup>
+    <optgroup label='N.America'></optgroup>
+    <option title="Atlantic Daylight Time" value="-3">ADT</option>
+    <option title="Alaska Daylight Time" value="-8">AKDT</option>
+    <option title="Alaska Standard Time" value="-9">AKST</option>
+    <option title="Atlantic Standard Time" value="-4">AST</option>
+    <option title="Central Daylight Time" value="-5">CDT</option>
+    <option title="Central Standard Time" value="-6">CST</option>
+    <option title="Eastern Daylight Time" value="-4">EDT</option>
+    <option title="Eastern Greenland Summer Time" value="0">EGST</option>
+    <option title="East Greenland Time" value="-1">EGT</option>
+    <option title="Eastern Standard Time" value="-5">EST</option>
+    <option title="Hawaii-Aleutian Daylight Time" value="-9">HADT</option>
+    <option title="Hawaii-Aleutian Standard Time" value="-10">HAST</option>
+    <option title="Mountain Daylight Time" value="-6">MDT</option>
+    <option title="Mountain Standard Time" value="-7">MST</option>
+    <option title="Newfoundland Daylight Time" value="-2">NDT</option>
+    <option title="Newfoundland Standard Time" value="-3">NST</option>
+    <option title="Pacific Daylight Time" value="-7">PDT</option>
+    <option title="Pierre & Miquelon Daylight Time" value="-2">PMDT</option>
+    <option title="Pierre & Miquelon Standard Time" value="-3">PMST</option>
+    <option title="Pacific Standard Time" value="-8">PST</option>
+    <option title="Western Greenland Summer Time" value="-2">WGST</option>
+    <option title="West Greenland Time" value="-3">WGT</option>
+
+    <optgroup label='------------------'></optgroup>
+    <optgroup label='Pacific'></optgroup>
+    <option title="New Zealand Daylight Time" value="13">NZDT</option>
+    <option title="New Zealand Standard Time" value="12">NZST</option>
+    <option title="Chatham Island Daylight Time" value="13">CHADT</option>
+    <option title="Chatham Island Standard Time" value="12">CHAST</option>
+    <option title="Fiji Summer Time" value="13">FJST</option>
+    <option title="Fiji Time" value="12">FJT</option>
+    <option title="West Samoa Time" value="13">WST</option>
+    <option title="Easter Island Summer Time" value="-5">EASST</option>
+    <option title="Easter Island Standard Time" value="-6">EAST</option>
+    <option title="Chamorro Standard Time" value="10">ChST</option>
+    <option title="Papua New Guinea Time" value="10">PGT</option>
+    <option title="Tuvalu Time" value="12">TVT</option>
+    <option title="Solomon IslandsTime" value="11">SBT</option>
+    <option title="Line Islands Time" value="14">LINT</option>
+    <option title="Pohnpei Standard Time" value="11">PONT</option>
+    <option title="Tahiti Time" value="-10">TAHT</option>
+    <option title="Cook Island Time" value="-10">CKT</option>
+    <option title="Vanuatu Time" value="11">VUT</option>
+    <option title="Gilbert Island Time" value="12">GILT</option>
+    <option title="Phoenix Island Time" value="13">PHOT</option>
+    <option title="Marshall Islands Time" value="12">MHT</option>
+    <option title="New Caledonia Time" value="11">NCT</option>
+    <option title="Niue Time" value="-11">NUT</option>
+    <option title="Palau Time" value="9">PWT</option>
+    <option title="Tokelau Time" value="13">TKT</option>
+    <option title="Wallis and Futuna Time" value="12">WFT</option>
+    <option title="Pitcairn Standard Time" value="18">PST</option>
+    <option title="Galapagos Time" value="-6">GALT</option>
+    <option title="Marquesas Time" value="-9">MART</option>
+    <option title="Gambier Time" value="-9">GAMT</option>
+    <option title="Samoa Standard Time" value="-11">SST</option>
+    <option title="Yap Time" value="-10">YAPT</option>
+    <option title="Eastern Daylight Time" value="11">EDT</option>
+
+    <optgroup label='------------------'></optgroup>
+    <optgroup label='S.America'></optgroup>
+    <option title="Amazon Summer Time" value="-3">AMST</option>
+    <option title="Amazon Time" value="-4">AMT</option>
+    <option title="Argentina Time" value="-3">ART</option>
+    <option title="Bolivia Time" value="-4">BOT</option>
+    <option title="Brasilia Summer Time" value="-2">BRST</option>
+    <option title="Brasília time" value="-3">BRT</option>
+    <option title="Chile Summer Time" value="-3">CLST</option>
+    <option title="Chile Standard Time" value="-4">CLT</option>
+    <option title="Colombia Time" value="-5">COT</option>
+    <option title="Ecuador Time" value="-5">ECT</option>
+    <option title="Falkland Islands Summer Time" value="-3">FKST</option>
+    <option title="Falkland Island Time" value="-4">FKT</option>
+    <option title="Fernando de Noronha Time" value="-2">FNT</option>
+    <option title="French Guiana Time" value="-3">GFT</option>
+    <option title="Guyana Time" value="-4">GYT</option>
+    <option title="Peru Time" value="-5">PET</option>
+    <option title="Paraguay Summer Time" value="-3">PYST</option>
+    <option title="Paraguay Time" value="-4">PYT</option>
+    <option title="Suriname Time" value="-3">SRT</option>
+    <option title="Uruguay Summer Time" value="-2">UYST</option>
+    <option title="Uruguay Time" value="-3">UYT</option>
+    <option title="Venezuelan Standard Time" value="-4">VET</option>
+    </select>
+    </span>
+    </div>
+    </br>
+    <label for="ResultGMT" id="ResultGMT" style="font-size:30px"></label>
+    <label for="GMT" id="GMT" style="font-size:12px; vertical-align: top; position:absolute"></label>
+    <label for="GMT1" id="GMT1" style="font-size:12px; vertical-align: bottom"></label>
+    </br></br>
+    <label for="Result" id="Result" style="font-size:30px"></label>
+    <label for="ResultUTC" id="ResultUTC" style="font-size:12px; vertical-align: top; position:absolute"></label>
+    <label for="Local" id="Local" style="font-size:12px; vertical-align: bottom"></label>
+    </br>
+    <label for="Duration" id="Duration" style="font-size:15px; padding:3px"></label>
+    </form>
+
+    </body>
+</html>

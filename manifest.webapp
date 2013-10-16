@@ -1,15 +1,30 @@
 {
-    "name": "Notey",
-    "description": "Note Taking",
-    "version": "1.0",
-    "launch_path": "/Notey.html",
+  "name": "Notey",
+  "description": "Note Taking",
+  "version": "1.0",
+  "launch_path": "/Notey.html",
 
-    "icons": {
-        "16": "/clock16.png",
-        "48": "/clock48.png",
-        "128": "/clock128.png"
-    },
-
-    "default_locale": "en"
-
+  "icons": {
+    "16": "/clock16.png",
+    "48": "/clock48.png",
+    "128": "/clock128.png"
+  },
+  "permissions": {
+     "desktop-notification": {
+            "description" : "To show notifications"
+        },
+        "alarms": {
+            "description": "Permit to add alarms"
+         },
+     "contacts": {
+     "access": "readwrite",
+     "description" : "Add, read, or modify contacts from the address book on the device and read contacts from the SIM."
+      }
+  },
+  "type": "privileged",
+  "default_locale": "en",
+      "messages": [
+      { "alarm": "/Notey.html" },
+      { "notification": "/Notey.html"}
+    ]
 }

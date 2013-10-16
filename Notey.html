@@ -1,10 +1,27 @@
 <!DOCTYPE html>
+<html>
 <head>
-    <script type="text/javascript" src="todo.js"></script>
-    <link rel="stylesheet" type="text/css" href="time.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
 </head>
 <body>
-    <input id="notes" type="text"></input>
-    <button id="notebutton">Save</button>
-    </body>
+    <section id="view-add" role="region">
+      <header>
+        <h1>[+] Todo</h1>
+      </header>
+
+      <section class="view-content">
+        <div class="wrapper">
+
+          <form aria-owns="btn-add-done">
+            <input type="text" name="task" id="task" required>
+          </form>
+        </div>
+      </section>
+
+          <button id="btn-add" >Done</button>
+          <button id="btn-cancel" >Cancel</button>
+    </section><!--end view-add-->
+</body>
+    <script type="text/javascript" src="todo.js"></script>
 </html>

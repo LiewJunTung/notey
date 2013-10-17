@@ -2,7 +2,7 @@
   "name": "Notey",
   "description": "Note Taking",
   "version": "1.0",
-  "launch_path": "/Notey.html",
+  "launch_path": "/add.html",
 
   "icons": {
     "16": "/clock16.png",
@@ -24,7 +24,7 @@
   "type": "privileged",
   "default_locale": "en",
       "messages": [
-      { "alarm": "/Notey.html" },
-      { "notification": "/Notey.html"}
+      { "alarm": "/add.html" },
+      { "notification": "/add.html"}
     ]
 }

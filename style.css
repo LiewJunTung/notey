@@ -1,158 +1,191 @@
-/* Stretch vertically */
-html, body { height: 100%; }
-
-body {
-  background: radial-gradient(ellipse at center, rgba(231,76,60,1) 0%,rgba(192,57,43,1) 100%);
-  color: #fff;
-  font-family: MozTT, sans-serif;
-
-  /* Reset base size */
-  font-size: 16px;
-
-  /* Set font size relative to base size */
-  /* Check <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">this</a> article on rem usage */
-  font-size: 1.4rem;
-
-  font-weight: 300;
-
-  /* Remove spacing */
-  margin: 0;
-}
-
-h1, h2, h3, h4, h5, h6 { font-weight: 300; }
-
-h1 { font-size: 3rem; }
-
-a {
-  color: #FFA49E;
-  text-decoration: none;
-  text-shadow: 0px 1px 1px rgba(0,0,0,.3);
-}
-a:hover { color: #fff; }
-
-input, button, select, textarea {
-  border-radius: 0;
-  box-shadow: none;
-}
-input[type=text], textarea, select {
-  border: none;
-  font-family: MozTT, sans-serif;
-  font-size: 1.3rem;
-  font-weight: 300;
-  padding: .7rem .8rem;
-}
-
-.btn {
-  border: none;
-  width: 3.5rem;
-  height: 3.5rem;
-}
-.btn > span {
-  display: none;
-}
-.btn:disabled {
-  opacity: .2;
-}
-.btn.done {
-  background: url(../img/check.svg) no-repeat center center;
-}
-.btn.add {
-  background: url(../img/add.svg) no-repeat center center;
-}
-.btn.del {
-  background: url(../img/del.svg) no-repeat center center;
-}
-.btn.edit {
-  background: url(../img/edit.svg) no-repeat center center;
-}
-.btn:hover {
-  background-color: rgba(255,255,255,.1);
-}
-
-.todo-list > li {
-  border-bottom: 1px solid rgba(255,255,255,.1);
-  position: relative;
-}
-.todo-list > li > .btn {
-  top: 0; right: 0;
-  position: absolute;
-  height: 3.9rem;
-}
-.todo-list label {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  display: block;
-  padding: 1rem 2.8rem 1rem 1rem;
-}
-.todo-list > li:last-child,
-.todo-list > li:last-child > label {
-  border-bottom: none;
-}
-.todo-list label > span {
-  transition: all .5s;
-}
-
-/***
-  This selector is interesting. It creates a line-through and
-  decrease opacity of text in span when checkbox is checked
-***/
-.todo-list input[type=checkbox]:checked + span {
-  text-decoration: line-through;
-  opacity: .4;
-}
-
-.todo-list > li > input[type=text] {
-  margin: .4rem;
-  /* removing input padding and margin from 100% */
-  width: calc(100% - 2.3rem);
-}
-
-.reset-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-[aria-hidden=true] {
-  display: none !important;
-}
-
-.slide-up-in {
-  animation-name: slide-up-in;
-  animation-duration: .6s;
-  transform: translateY(0%);
-  opacity: 1;
-}
-@keyframes slide-up-in {
-  0% { transform: translateY(30%); opacity: 0; }
-  100% { transform: translateY(0%); opacity: 1; }
-}
-
-.slide-down-out {
-  animation-name: slide-down-out;
-  animation-duration: .6s;
-  transform: translateY(30%);
-  opacity: 0;
-}
-@keyframes slide-down-out {
-  0% { transform: translateY(0%); opacity: 1; }
-  100% { transform: translateY(30%); opacity: 0; }
-}
-
-.slide-right-in {
-  animation-name: slide-right-in;
-  animation-duration: .6s;
-  transform: translateX(0%);
-}
-@keyframes slide-right-in {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(0%); }
-}
-
-.slide-left-out {
-  animation-name: slide-left-out;
-  animation-duration: .6s;
-  transform: translateX(-100%);
-}
-@keyframes slide-left-out {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-100%); }
-}
+
+html, body { height: 100%; }
+
+body {
+  background: radial-gradient(ellipse at center, rgba(102,204,0,1) 0%,rgba(102,204,0,1) 100%);
+  color: #fff;
+  font-family: MozTT, sans-serif;
+  font-size: 16px;
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: 300; }
+
+h1 { font-size: 2rem; }
+
+a {
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0px 1px 1px rgba(0,0,0,.3);
+}
+
+input, button, select, textarea {
+  border-radius: 0;
+  box-shadow: none;
+}
+input[type=text], textarea, select {
+  border: none;
+  font-family: MozTT, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  padding: .7rem .8rem;
+}
+
+
+/**
+ * View Specific Styles
+ */
+#view-todos > .view-content {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#view-add > .view-content {
+  margin-top: 2rem;
+}
+#view-add > .view-content > .wrapper {
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+}
+#view-add input[name=task] {
+  width: 100%;
+}
+#view-add .options {
+  margin: 0 0 .5rem 0;
+  text-align: right;
+}
+#view-add .options [role=listitem] {
+  margin: .5rem 0;
+}
+#view-add .options a {
+  padding: .4rem;
+}
+
+
+/**
+ * Modules
+ */
+
+/*View Module*/
+[role=region] {
+  background: radial-gradient(ellipse at center, rgba(102,204,0,1) 0%,rgba(102,204,0,1) 100%);
+  top: 0; right: 0; bottom: 0; left: 0;
+  position: fixed;
+  overflow-x: hidden;
+}
+[role=region] > header {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+header > h1 {
+  background-color: rgba(0,0,0,.8);
+  padding: .5rem 0 .5rem 0;
+  margin: 0;
+  text-shadow: 0px 1px 1px rgba(0,0,0,.4);
+}
+[role=region] > .view-content {
+  margin: 0 1rem 7rem 1rem;
+}
+[role=region] > footer {
+  background: rgba(0,0,0,.2);
+  right: 0; bottom: 0; left: 0;
+  position: fixed;
+  text-align: center;
+}
+[role=region] > footer > menu[role=toolbar] {
+  margin: 0;
+  padding: 0;
+}
+
+/*Button Module*/
+.btn {
+  border: none;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.btn > span {
+  display: none;
+}
+.btn:disabled {
+  opacity: .2;
+}
+.btn.done {
+  background: url(../img/done.png) no-repeat center center;
+}
+.btn.add {
+  background: url(../img/check.png) no-repeat center center;
+}
+.btn.del {
+  background: url(../img/del.png) no-repeat center center;
+}
+.btn.plus {
+  background: url(../img/plus.png) no-repeat center center;
+}
+.btn.reminder{
+  background: url(../img/reminder.png) no-repeat center center;
+}
+.btn.edit{
+  background: url(../img/edit.png) no-repeat center center;
+}
+.btn.back{
+  background: url(../img/back.png) no-repeat center center;
+}
+.btn:hover {
+  background-color: rgba(255,255,255,.1);
+}
+
+/*List Module*/
+.todo-list > li {
+  border-bottom: 1px solid rgba(102,204,0,1);
+  position: relative;
+}
+.todo-list > li > .btn {
+  top: 0; right: 0;
+  position: absolute;
+  height: 3.9rem;
+}
+.todo-list label {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: block;
+  padding: 1rem 2.8rem 1rem 1rem;
+}
+.todo-list > li:last-child,
+.todo-list > li:last-child > label {
+  border-bottom: none;
+}
+.todo-list label > span {
+  transition: all .5s;
+}
+.todo-list input[type=checkbox]:checked + span {
+  text-decoration: line-through;
+  opacity: .4;
+}
+.todo-list > li > input[type=text] {
+  margin: .4rem;
+  /* removing input padding and margin from 100% */
+  width: calc(100% - 2.3rem);
+}
+.todo-list input[type=checkbox]
+{
+	visibility: hidden;
+}
+/**
+ * Utility
+ */
+.reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+[aria-hidden=true] {
+  display: none !important;
+}
+
+#current{
+  background-color: rgba(0,0,0,.8);
+}

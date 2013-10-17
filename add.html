@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="todo.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body role="application">
+  <section id="view-add" role="region">
+    <section class="view-content">
+      <div class="wrapper">
+        <form aria-owns="btn-add-done">
+          <input type="text" name="task" id="task" required>
+        </form>
+      </div>
+    </section>
+
+	<footer>
+	<header>
+	  <h1>Add New</h1>
+	</header>
+      <menu role="toolbar">
+        <button role="menuitem" class="btn back" id="back_reminder"><span>Back</span></button>
+        <button role="menuitem" class="btn add" id="btn-add"><span>Add</span></button>
+        <button role="menuitem" class="btn del"><span>Delete</span></button>
+      </menu>
+      </menu>
+    </footer>
+  </section><!--end view-add-->
+
+</body>
+</html>

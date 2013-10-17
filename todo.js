@@ -123,9 +123,6 @@ function Main()
         //determine date at the end.
 
         var time2 = date + time;
-
-        alert(time2);
-
         var myDate  = new Date (time2);
 
 
@@ -152,10 +149,6 @@ function Main()
 
         }
 
-        else if(compareTest == 0)
-        {
-          Search();
-        }
         else
 
             alert("Nope!");
@@ -185,6 +178,7 @@ function Notification(text, ph, phone_contact){
             if (ph == "SMS")
               {
                 var phone_number = Search(phone_contact);
+                alert('sms_phone-number' + phone_number);
                 SMS(phone_number);
               }
             else if (ph == "Phone")
@@ -210,8 +204,6 @@ function SMS(phone_number)
 
 {
 
-
-
      var sms = new MozActivity(
 
      {
@@ -235,14 +227,14 @@ function SMS(phone_number)
 function Phonecall(phone_number)
 
 {
-
+    alert("phone number: " + phone_number);
     var call = new MozActivity({
 
         name: "dial",
 
         data: {
 
-            number: phone_number
+            number: "+123123123"
 
         }
 
@@ -260,21 +252,18 @@ function Search(phone_contact)
 
 var contact_name = phone_contact;
 
-alert(contact_name);
-
 var filter = {
 
   filterValue : contact_name,
 
-  filterBy : ['givenName'],
+  filterBy : ["givenName","name","nickName"],
 
-  filter0p : "Nickname",
+  filter0p : "contains",
 
   filterLimit : 1
 };
 
 var search = navigator.mozContacts.find(filter);
-
 
 search.onsuccess = function() {
 
@@ -282,13 +271,17 @@ search.onsuccess = function() {
 
     var person = search.result[0];
 
-    alert("Found:" + person.givenName[0]);
+    var tele = "+" + person.tel[0].value;
+    
+    
 
   } else {
 
     alert("Sorry, there is no such contact.")
 
   }
+  alert(tele);
+  return tele;
 
 }
 
@@ -299,9 +292,6 @@ search.onerror = function() {
   alert("Uh! Something goes wrong, no result found!");
 
 }
-
-
-
 }
 
 
@@ -310,11 +300,24 @@ function Cancel()
 
 {
 
-    window.location = 'Notey.html';
+    alarm('haha');
 
 }
 
+function Add()
 
+{
+
+    window.location.href = "reminder.html";
+
+}
+
+function Done()
+
+{
+    window.location.href = "reminder.html";
+
+}
 
  document.addEventListener('DOMContentLoaded', function () {
 
@@ -333,6 +336,30 @@ function Cancel()
            Cancel();
 
            })
+
+        var link3 = document.getElementById('back_reminder');
+
+           link3.addEventListener('click', function(){
+
+           Cancel();
+
+           })
+
+        var link4 = document.getElementById('done');
+
+        link4.addEventListener('click', function(){
+
+        Done();
+
+        })
+
+        var link5 = document.getElementById('adding');
+
+        link5.addEventListener('click', function(){
+
+        Add();
+
+        })
 
  })
 

@@ -17,7 +17,7 @@
             "description": "Permit to add alarms"
          },
      "contacts": {
-     "access": "readwrite",
+     "access": "readonly",
      "description" : "Add, read, or modify contacts from the address book on the device and read contacts from the SIM."
       }
   },

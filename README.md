@@ -5,6 +5,7 @@ Hackweekday reminder
 
 'Call darien @ 13:37 - tomorrow'
 
+"SMS JT @ 13:37 - next week
 
 How to use:
 1) Type "Call" or "SMS" followed by spacebar.
